@@ -4,21 +4,22 @@ const bodyParser = require('body-parser');
 
 const { MIDI_PATH, getMidi, saveMidi } = require('../controllers/MIDI_Controller');
 
-router.use(bodyParser);
 
 router.get('/song', (req, res)=>{
     console.log("GETTING SONG");
-    getMidi()
+    res.download(MIDI_PATH);
+    /*getMidi()
     .then((data)=>{
-        console.log(data.buffer);
-        res.status(200).send(data.buffer);
+        console.log(data);
+        res.status(200).send(data);
     })
     .catch((err)=>{
         console.log(`[ERROR] Error in GET /song: ${err}`);
-    });
+    });*/
 });
 
 router.post('/song', (req, res)=>{
+    console.log("POST SONG");
     const song = req.body.song;
     saveMidi(song);
 });

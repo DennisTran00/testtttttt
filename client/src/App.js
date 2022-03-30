@@ -1,9 +1,11 @@
+/* eslint-disable no-restricted-globals */
 import './App.css';
+import Midi from './components/Midi';
 
 function App() {
   return (
     <div>
-      <h1>test</h1>
+      <Midi/>
     </div>
   );
 }
