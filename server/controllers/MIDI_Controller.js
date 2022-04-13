@@ -9,7 +9,8 @@ const getMidi = async ()=>{
 }
 
 const saveMidi = async (song)=>{
-    fs.writeFileSync(MIDI_PATH, song);
+    console.log(`SAVING MIDI`);
+    fs.writeFileSync(MIDI_PATH, JSON.stringify(song));
 }
 
 module.exports = {
