@@ -2,6 +2,7 @@
 import './App.css';
 import Midi from './components/Midi';
 
+
 function App() {
   return (
     <div>
@@ -9,5 +10,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
